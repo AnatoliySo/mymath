@@ -40,3 +40,24 @@ func TestYn(t *testing.T) {
 		t.Errorf("Yn(%v, %v) = %v, want %v", in1, in2, x, out)
 	}
 }
+
+func TestCeil(t *testing.T) {
+	const in, out = 2.7, 3
+	if x := Ceil(in); x != out {
+		t.Errorf("Ceil(%v) = %v, want %v", in, x, out)
+	}
+}
+
+func TestFloor(t *testing.T) {
+	const in, out = 2.7, 2
+	if x := Floor(in); x != out {
+		t.Errorf("Floor(%v) = %v, want %v", in, x, out)
+	}
+}
+
+func TestMin(t *testing.T) {
+	const in1, in2, out = 2, 3, 2
+	if x := Min(in1, in2); x != out {
+		t.Errorf("Min(%v, %v) = %v, want %v", in1, in2, x, out)
+	}
+}
