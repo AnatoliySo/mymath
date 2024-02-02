@@ -1,6 +1,7 @@
 package mymath
 
 import (
+	"math"
 	"testing"
 )
 
@@ -22,5 +23,20 @@ func TestPow(t *testing.T) {
 	const in1, in2, out = 2, 3, 8
 	if x := Pow(in1, in2); x != out {
 		t.Errorf("Pow(%v, %v) = %v, want %v", in1, in2, x, out)
+	}
+}
+
+func TestMax(t *testing.T) {
+	const in1, in2, out = 2, 3, 3
+	if x := Max(in1, in2); x != out {
+		t.Errorf("Max(%v, %v) = %v, want %v", in1, in2, x, out)
+	}
+}
+
+func TestYn(t *testing.T) {
+	const in1, in2 = 1, 2
+	out := math.Yn(in1, in2)
+	if x := Yn(in1, in2); x != out {
+		t.Errorf("Yn(%v, %v) = %v, want %v", in1, in2, x, out)
 	}
 }
